@@ -17,7 +17,7 @@ $span->log([
   "key" => $value,
 ], $time);
 
-OpentracingFactory::closeAllScopes();
+$scope->close();
 $tracer->flush();
 ````
 **documentation of opentracing php**
