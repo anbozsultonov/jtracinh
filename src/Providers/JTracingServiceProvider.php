@@ -9,7 +9,7 @@ class JTracingServiceProvider extends ServiceProvider
     {
         if (!file_exists(config_path('opentracing.php'))) {
             $this->publishes([
-                __DIR__.'/../config/opentracing.php' => config_path('opentracing.php'),
+                __DIR__.'/../../config/opentracing.php' => config_path('opentracing.php'),
             ]);
         }
     }
