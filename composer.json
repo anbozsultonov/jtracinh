@@ -1,0 +1,32 @@
+{
+    "name": "jtracing/jcp",
+    "description": "\"Jeager opentracing client php\"",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jtracing\\Jcp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "anbozsultonov",
+            "email": "anboz98sultonov@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "php": "^8.1",
+        "jonahgeorge/jaeger-client-php": "v1.4.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.6"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jtracing\\Jcp\\Providers\\JTracingServiceProvider"
+            ]
+        }
+    }
+}
