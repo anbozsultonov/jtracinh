@@ -19,9 +19,7 @@
         "php": "^8.1",
         "jonahgeorge/jaeger-client-php": "v1.4.1"
     },
-    "require-dev": {
-        "orchestra/testbench": "^7.6"
-    },
+    "require-dev": {},
     "extra": {
         "laravel": {
             "providers": [
