@@ -7,11 +7,16 @@ class JTracingServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        if (!file_exists(config_path('opentracing.php'))) {
-            $this->publishes([
-                __DIR__ . '/../config/opentracing.php' => config_path('opentracing.php'),
-            ]);
+        $config = config_path('opentracing.php');
+        $localConfig = __DIR__ . '/../config/opentracing.php';
+
+        if (!file_exists($config)) {
+            copy($localConfig, $config);
         }
+
+        $this->publishes([
+            $localConfig => $config,
+        ]);
     }
 
     public function register(): void
