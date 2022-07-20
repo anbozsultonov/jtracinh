@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jtracing\\Jcp\\Providers\\JTracingServiceProvider"
+                "Jtracing\\Jcp\\JTracingServiceProvider"
             ]
         }
     }
